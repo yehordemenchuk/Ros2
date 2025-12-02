@@ -18,9 +18,10 @@ find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
 
 # Install Python modules
+# Install Python package from the robot_edge_navigation directory
 ament_python_install_package(${PROJECT_NAME}
   PACKAGE_DIR
-  src/${PROJECT_NAME})
+  ".")
 
 # Install launch files
 install(DIRECTORY launch
@@ -38,4 +39,6 @@ if(BUILD_TESTING)
 endif()
 
 ament_package()
+
+
 
